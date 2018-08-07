@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html ng-app="offline-form"> <!--manifest="offline-form.appcache">-->
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="./manifest.json" />
+	<title>Diageo's Uniquely Yours</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="./css/materialize.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-controller="formCtrl">
+
+	<div id="offline-form" class="container">
+		<div class="row">
+			<div class="col s10">
+				<img class="mx-auto w-50" src="img/logo.png" alt="Diageo Make Every Celebration Uniquely yours"/>
+			</div>
+		</div>
+		<div class="row">
+			<form class="col s10" ng-submit="formSubmit(user)">
+				<div class="input-field">
+					<input id="first_name" type="text" class="validate" ng-model="user.name" required>
+					<label for="first_name">Your name</label>
+				</div>
+				<div class="input-field">
+					<input id="first_name" type="email" class="validate" ng-model="user.email" required>
+					<label for="first_name">Email</label>
+				</div>
+				<div class="input-field">
+					<input id="contact_no" type="number" class="validate" ng-minlength="10" ng-maxlength="10" ng-model="user.phone_no" required>
+					<label for="contact_no">Phone</label>
+				</div>
+				<p>Which Personalized Package are you interested in?</p>
+				<div class="input-field col s12">
+					<select>
+						<option value="" selected>Choose your option</option>
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+					</select>
+					<label>Which Personalized Package are you interested in?</label>
+				</div>
+				<div class="col s12 text-center py-5">
+					<button class="btn waves-effect waves-light modal-trigger" type="submit" name="action" data-target="modal1">
+						Submit
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="./js/materialize.min.js"></script>
+	<script src="./js/angular.min.js"></script>
+	<script src="./js/ngStorage.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>

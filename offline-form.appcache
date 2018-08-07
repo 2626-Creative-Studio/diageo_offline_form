@@ -1,0 +1,32 @@
+﻿CACHE MANIFEST
+data.html
+index.html
+manifest.json
+package.json
+
+css/style.css
+css/bootstrap.min.css
+
+img/1024-x-1366.png
+img/152.jpg
+img/167.jpg
+img/256.jpg
+img/768-x-1024.png
+img/arrows.svg
+img/email.svg
+img/logo.png
+img/phone.svg
+img/users.svg
+img/city.svg
+ 
+js/angular.min.js
+js/bootstrap.min.js
+js/jquery.min.js 
+js/ngStorage.min.js
+js/popper.min.js
+js/jquery-1.12.3.min.js
+js/firebase.js
+js/script.js
+
+ https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js
+ https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js

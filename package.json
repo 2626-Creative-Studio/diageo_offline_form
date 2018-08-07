@@ -1,0 +1,12 @@
+{
+  "name": "offline-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "browser-sync start --server --files css/*.css js/*.js *.html css/*.scss manifest.json"
+	},
+  "author": "",
+  "license": "ISC"
+}

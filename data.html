@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html ng-app="offline-form">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Diageo's Uniquely Yours</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body ng-controller="dataCtrl">
+	<div class="container text-right my-5">
+		<button class="btn btn-primary" ng-click="download()">Sync</button>
+	</div>
+
+	<div id="offline-data" class="container">
+		<h1 class="text-center mt-5">Form Data</h1>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>City</th>
+					<th>Phone No.</th>
+					<th>Selected Package</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="usr in users">
+					<td>{{usr.name}}</td>
+					<td>{{usr.email}}</td>
+					<td>{{usr.city}}</td>
+					<td>{{usr.phone_no}}</td>
+					<td>{{usr.selectedPackage}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<button type="button" class="close btn-block text-right pt-2 pr-3" data-dismiss="modal">&times;</button>
+				<!-- Modal body -->
+				<div class="modal-body text-center pb-5">
+					<h5>Data synced successfully!!</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/angular.min.js"></script>
+	<script src="./js/ngStorage.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>

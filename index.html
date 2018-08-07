@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html ng-app="offline-form">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="./manifest.json" />
+	<title>Diageo's Uniquely Yours</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/152.jpg">
+	<link rel="apple-touch-icon" sizes="167x167" href="./img/167.jpg">
+	<meta name="apple-mobile-web-app-title" content="Diageo's Uniquely Yours">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+</head>
+<body id="offline-form" ng-controller="formCtrl">
+
+	<div class="container text-secondary">
+		<div class="row">
+			<div class="col-12 col-md-9 mx-md-auto text-center my-5 pt-2">
+				<img class="w-75" src="img/logo.png"/>
+			</div>
+			<div class="col-12 col-md-9 mx-md-auto">
+				<form class="bg-white" ng-submit="formSubmit(user)">
+					<div class="input-group mb-4">
+						<input type="text" class="form-control" ng-model="user.name" placeholder="Your name" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<img src="img/users.svg" />
+							</span>
+						</div>
+					</div>
+					<div class="input-group mb-4">
+						<input type="text" class="form-control" ng-model="user.email" placeholder="Email" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<img src="img/email.svg" />
+							</span>
+						</div>
+					</div>
+					<div class="input-group mb-4">
+						<input type="text" class="form-control" ng-model="user.city" placeholder="Your City" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<img src="img/city.svg"  style="width: 16px;"/>
+							</span>
+						</div>
+					</div>
+					<div class="input-group mb-4">
+						<input type="text" class="form-control" ng-model="user.phone_no" placeholder="Phone" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<img src="img/phone.svg" />
+							</span>
+
+						</div>
+					</div>
+					<p class="mb-0">Which Personalized Package are you interested in?</p>
+					<div class="input-group mb-4" ng-init="user.selectedPackage = 'Select'">
+						<select class="form-control" id="sel1" ng-model="user.selectedPackage">
+							<option>Select</option>
+							<option value="Sapphire">Sapphire</option>
+							<option value="Jade">Jade</option>
+							<option value="Onyx">Onyx</option>
+							<option value="All of the above">All of the above</option>
+						</select>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<img src="img/arrows.svg" />
+							</span>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block my-5 font-weight-bold submit">KEEP IN TOUCH</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	<!-- The Modal -->
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<button type="button" class="close btn-block text-right pt-2 pr-3" data-dismiss="modal">&times;</button>
+				<!-- Modal body -->
+				<div class="modal-body text-center pb-5">
+					<h5>Thank you for sharing your details. Our representative will be in touch with you shortly.	</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/angular.min.js"></script>
+	<script src="./js/ngStorage.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>
